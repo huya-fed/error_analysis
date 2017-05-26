@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>虎牙前端-错误分析系统</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/layui_form.css">
+        <link rel="stylesheet" href="css/layer.css">
+    </head>
+    <body>
+    	<header class="am-topbar">
+    		<div class="am-container">
+    			<h1 class="am-topbar-brand"><span class="logo"></span>虎牙前端-错误分析系统</h1>
+    		</div>
+    	</header>
+    	<section class="am-main">
+    		<div class="site-title">
+		    	<fieldset><legend><a name="use">请输入错误的内容</a></legend></fieldset>
+		    </div>
+		    <div class="site-text site-block">
+		    	<form class="layui-form">
+		    		<div class="layui-form-item">
+				    	<label class="layui-form-label">错误信息</label>
+				    	<div class="layui-input-block">
+				      		<input type="text" name="msg"  lay-verify="required" autocomplete="off" class="layui-input">
+				   		</div>
+				  	</div> 
+		    		<div class="layui-form-item">
+				    	<label class="layui-form-label">错误行数</label>
+				    	<div class="layui-input-block">
+				      		<input type="text" name="line"  lay-verify="required" autocomplete="off" class="layui-input">
+				   		</div>
+				  	</div>
+				  	<div class="layui-form-item">
+				    	<label class="layui-form-label">错误列数</label>
+				    	<div class="layui-input-block">
+				      		<input type="text" name="column"  lay-verify="required" autocomplete="off" class="layui-input">
+				   		</div>
+				  	</div>
+				  	<div class="layui-form-item layui-form-text">
+					    <label class="layui-form-label">sourceMap内容</label>
+					    <div class="layui-input-block">
+					      <textarea name="sourcemap"  lay-verify="required" class="layui-textarea"></textarea>
+					    </div>
+					</div>
+					<div class="layui-form-item">
+					    <div class="layui-input-block">
+					    	<button class="layui-btn" lay-submit lay-filter="errorForm">立即提交</button>
+					    	<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+					    </div>
+				  </div>
+		    	</div>
+		    </form>
+		    <div class="site-title">
+		    	<fieldset><legend><a name="use">分析结果如下：</a></legend></fieldset>
+		    </div>
+		    <div class="error-cnt">
+		    	<div id="errdetail"><p style="text-align: center;padding: 100px 0;">暂无结果!</p></div>
+		    </div>
+	    </section>
+	    <script type="text/javascript" src="js/jquery.js"></script>
+	    <script type="text/javascript" src="js/layer.js"></script>
+	    <script type="text/javascript" src="js/layui_form.js"></script>
+	    <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
